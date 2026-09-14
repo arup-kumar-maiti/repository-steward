@@ -6,4 +6,5 @@ on:
 
 jobs:
   pr-conventions:
+    name: PR conventions
     uses: arup-kumar-maiti/repository-steward/.github/workflows/pr-conventions.yml@main

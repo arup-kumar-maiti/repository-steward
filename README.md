@@ -14,13 +14,11 @@ It checks:
 
 ## Adopt
 
-1. Copy the contents of `templates/child-repository` into the target
-   repository's root.
-2. Run:
+1. From the target repository's root, run:
 
    ```sh
-   git config core.hooksPath .githooks
+   curl -fsSL https://raw.githubusercontent.com/arup-kumar-maiti/repository-steward/main/bootstrap.py | python3
    ```
 
-3. Create a `main` ruleset requiring pull requests and the
+2. Create a `main` ruleset requiring pull requests and the
    `PR conventions / pr-conventions` check. Block force pushes and deletion.
