@@ -1,0 +1,9 @@
+#!/bin/sh
+
+subject=$(sed -n '1p' "$1")
+pattern='^[[:alpha:]][[:alnum:]-]*(\([^)][^)]*\))?!?: [^[:space:]].*$'
+
+if ! printf '%s\n' "$subject" | grep -Eq "$pattern"; then
+  printf '%s\n' 'Use Conventional Commits: type(scope): description' >&2
+  exit 1
+fi

@@ -1,0 +1,9 @@
+name: PR conventions
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  pr-conventions:
+    uses: arup-kumar-maiti/repository-steward/.github/workflows/pr-conventions.yml@main
