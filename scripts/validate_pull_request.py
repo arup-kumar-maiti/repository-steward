@@ -65,7 +65,7 @@ def validate_subject(subject: str, label: str) -> None:
     if not SUBJECT_PATTERN.fullmatch(subject):
         message = (
             f"{label} must use Conventional Commits syntax: "
-            "type(scope): concise imperative summary. Scope and ! are optional."
+            "type(scope): description. Scope and ! are optional."
         )
         fail(message)
 

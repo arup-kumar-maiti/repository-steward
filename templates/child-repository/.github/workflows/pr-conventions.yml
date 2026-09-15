@@ -1,9 +1,10 @@
 name: PR conventions
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened, edited]
 
 jobs:
   pr-conventions:
+    name: PR conventions
     uses: arup-kumar-maiti/repository-steward/.github/workflows/pr-conventions.yml@main
